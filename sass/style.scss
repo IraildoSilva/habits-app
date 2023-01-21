@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090A;
+  color: white;
+  height: 100vh;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px;
+  position: fixed;
+  width: 100%;
+  background-color: #09090A;
+
+  .day-register {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    padding: 16px 24px;
+
+    border: 2px solid #8B5CF6;
+    border-radius: 8px;
+    background: transparent;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      border: 2px solid #A78BFA;
+      color: black;
+      background-color: #8B5CF6;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.form-habits {
+  display: flex;
+  padding: 180px 48px 48px 48px;
+  width: fit-content;
+
+  .habits {
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    gap: 24px;
+    margin-top: 64px;
+
+    .habit {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      font-size: 32px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+  .days {
+    display: flex;
+    margin-left: 32px;
+    gap: 48px;
+
+    .day {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      div {
+        margin-bottom: 8px;
+        text-align: center;
+        font-family: 'Roboto Mono';
+        font-size: 20px;
+        line-height: 120%;
+        color: #A1A1AA;
+      }
+    }
+  }
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  width: 64px;
+  height: 64px;
+
+  background: #18181B;
+  border: 2px solid #27272A;
+  border-radius: 8px;
+  transition: 0.3s;
+  
+  &:checked {
+    background-color: #8B5CF6;
+    border-color: #A78BFA;
+  }
+}
+
+
+@media (max-width: 590px) {
+  .main-header{
+    .day-register {
+      span {
+        display: none;
+      }
+    }
+  }
+}
